@@ -72,7 +72,7 @@ describe Student, "validations" do
   end
 
   it "shouldn't accept toddlers" do
-    @student.assign_attributes(:birthday => Date.today - 3.years)
+    @student.assign_attributes(:birthday => Date.new(2010,9,24))#Date.today - 3.years)
     @student.should_not be_valid
   end
 
